@@ -10,126 +10,128 @@
 *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
 body{font-family:'Poppins',sans-serif;background:#0b0b0b;color:#fff;overflow-x:hidden}
 
-/* ---- NAVBAR ---- */
 nav{
-  position:fixed;width:100%;top:0;left:0;
-  background:rgba(0,0,0,0.85);
-  backdrop-filter:blur(12px);
-  display:flex;justify-content:space-between;align-items:center;
-  padding:10px 40px;z-index:1000;
-  box-shadow:0 0 20px rgba(255,60,0,.3);
+position:fixed;width:100%;top:0;left:0;
+background:rgba(0,0,0,0.85);
+backdrop-filter:blur(12px);
+display:flex;justify-content:space-between;align-items:center;
+padding:10px 40px;z-index:1000;
+box-shadow:0 0 20px rgba(255,60,0,.3);
 }
-nav .logo-area{
-  display:flex;align-items:center;gap:10px;
-}
+
+nav .logo-area{display:flex;align-items:center;gap:10px}
+
 nav .logo-img{
-  width:65px;height:65px;border-radius:50%;
-  object-fit:cover;object-position:center;
-  border:2px solid #ffae00;
-  box-shadow:0 0 10px rgba(255,174,0,.5);
+width:65px;height:65px;border-radius:50%;
+object-fit:cover;
+border:2px solid #ffae00;
+box-shadow:0 0 10px rgba(255,174,0,.5);
 }
+
 nav .logo-text{
-  font-weight:800;font-size:22px;
-  background:linear-gradient(45deg,#ffae00,#ff6600,#ff3c00);
-  -webkit-background-clip:text;
-  color:transparent;
-  animation:colorShift 6s ease infinite;
+font-weight:800;font-size:22px;
+background:linear-gradient(45deg,#ffae00,#ff6600,#ff3c00);
+-webkit-background-clip:text;
+color:transparent;
 }
-nav ul{
-  list-style:none;display:flex;gap:25px;
-}
+
+nav ul{list-style:none;display:flex;gap:25px}
+
 nav ul li a{
-  text-decoration:none;color:#fff;font-weight:500;transition:.3s;
+text-decoration:none;color:#fff;font-weight:500;transition:.3s;
 }
+
 nav ul li a:hover{color:#ffae00}
 
-/* ---- EFECTO CHAMOY SUAVE ---- */
-@keyframes colorShift{
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
-}
-.chamoy-gradient{
-  background:linear-gradient(270deg,#ffae00,#ff6600,#ff3c00,#ffae00);
-  background-size:800% 800%;
-  animation:colorShift 12s ease infinite;
+.hero{
+position:relative;
+text-align:center;
+padding:150px 20px 100px;
+overflow:hidden;
 }
 
-/* ---- HERO ---- */
-.hero{
-  position:relative;
-  text-align:center;
-  padding:150px 20px 100px;
-  overflow:hidden;
-}
-.hero::before{
-  content:"";position:absolute;top:0;left:0;width:100%;height:100%;
-  background:url('https://i.ibb.co/C7LfdK6/chamoy-bg.jpg') center/cover no-repeat;
-  z-index:-2;filter:brightness(40%);
-}
-.hero::after{
-  content:"";position:absolute;top:0;left:0;width:100%;height:100%;
-  background:linear-gradient(270deg,#ffae00,#ff6600,#ff3c00,#ffae00);
-  background-size:800% 800%;
-  animation:colorShift 10s ease infinite;
-  opacity:0.25;z-index:-1;
-}
 .hero h1{
-  font-size:70px;color:#ffae00;text-shadow:0 0 25px rgba(255,60,0,.8);
+font-size:70px;color:#ffae00;text-shadow:0 0 25px rgba(255,60,0,.8);
 }
+
 .hero p{
-  font-size:22px;margin:20px auto;max-width:650px;color:#fff;
+font-size:22px;margin:20px auto;max-width:650px;color:#fff;
 }
+
 .btn{
-  background:linear-gradient(45deg,#ff3c00,#ffae00);
-  border:none;color:#fff;
-  padding:15px 35px;font-size:18px;
-  border-radius:30px;cursor:pointer;
-  font-weight:600;transition:.3s;
-  margin:10px;position:relative;overflow:hidden;
+background:linear-gradient(45deg,#ff3c00,#ffae00);
+border:none;color:#fff;
+padding:15px 35px;font-size:18px;
+border-radius:30px;cursor:pointer;
+font-weight:600;transition:.3s;
+margin:10px;
 }
+
 .btn:hover{transform:scale(1.05);box-shadow:0 0 20px #ffae00}
 
-/* ---- SECCIONES ---- */
-section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;
-align-items:center;text-align:center;padding:80px 20px;transition:opacity 0.7s ease}
+section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:80px 20px;
+}
+
 #productos{background:#111}
-#productos h2,#promos h2,#nosotros h2{font-size:42px;color:#ffae00;margin-bottom:40px}
 
-/* ---- PRODUCTOS ---- */
-.productos{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;margin-top:40px;}
+#productos h2,#promos h2,#nosotros h2{
+font-size:42px;color:#ffae00;margin-bottom:40px
+}
+
+.productos{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+margin-top:40px;
+}
+
 .producto{
-  background:#151515;border-radius:20px;width:320px;overflow:hidden;transition:.4s;
-  box-shadow:0 0 10px rgba(255,174,0,0.1);
+background:#151515;
+border-radius:20px;
+width:320px;
+overflow:hidden;
+transition:.4s;
+box-shadow:0 0 10px rgba(255,174,0,0.1);
 }
-.producto:hover{transform:translateY(-10px);box-shadow:0 0 25px rgba(255,174,0,0.3);}
-.producto img{width:100%;height:250px;object-fit:cover;border-bottom:2px solid #ffae00;}
-.producto h3{margin-top:15px;}
-.producto p{color:#ccc;padding:0 15px 20px;}
 
-/* ---- PROMOS ---- */
-#promos{position:relative;color:#fff;background:#101010;}
-.promo-box{
-  background:rgba(255,255,255,0.05);
-  border-radius:20px;
-  padding:40px;margin:20px;
-  max-width:600px;
-  border:1px solid rgba(255,174,0,0.2);
+.producto:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(255,174,0,0.3);
 }
-.promo-box h3{font-size:28px;margin-bottom:10px;color:#ffae00}
 
-/* ---- NOSOTROS ---- */
-#nosotros{background:#0b0b0b;color:#fff;}
-#nosotros p{max-width:700px;font-size:18px;color:#ccc;line-height:1.6;}
+.producto img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-bottom:2px solid #ffae00;
+}
 
-/* ---- FOOTER ---- */
-footer{background:#000;color:#999;text-align:center;padding:25px;font-size:14px}
+.producto h3{margin-top:15px}
+
+.producto p{color:#ccc;padding:0 15px 20px}
+
+footer{
+background:#000;
+color:#999;
+text-align:center;
+padding:25px;
+font-size:14px
+}
+
 footer a{color:#ffae00;text-decoration:none}
 
 @media(max-width:768px){
-.hero h1{font-size:48px;}
-.productos{flex-direction:column;align-items:center;}
-nav{flex-direction:column;gap:10px;}
+.hero h1{font-size:48px}
+.productos{flex-direction:column;align-items:center}
+nav{flex-direction:column;gap:10px}
 }
 </style>
 </head>
@@ -137,66 +139,79 @@ nav{flex-direction:column;gap:10px;}
 <body>
 
 <nav>
-  <div class="logo-area">
-    <!-- 🔸 Aquí va tu logo (tu link actual de iCloud, no mostrará imagen hasta ser directo) -->
-    <img src= https://i.ibb.co/VYXR5MT3/Sin-t-tulo.png alt="Logo Mister Chile" class="logo-img">
-    <div class="logo-text">Mister Chile</div>
-  </div>
-  <ul>
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#productos">Productos</a></li>
-    <li><a href="#promos">Promos</a></li>
-    <li><a href="#nosotros">Nosotros</a></li>
-  </ul>
+<div class="logo-area">
+<img src="https://i.ibb.co/VYXR5MT3/Sin-t-tulo.png" alt="Logo Mister Chile" class="logo-img">
+<div class="logo-text">Mister Chile</div>
+</div>
+
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#productos">Productos</a></li>
+<li><a href="#promos">Promos</a></li>
+<li><a href="#nosotros">Nosotros</a></li>
+</ul>
 </nav>
 
-<section id="inicio" class="hero chamoy-gradient">
-  <h1>Sabores con Estilo</h1>
-  <p>Chamoys, gomitas, dulces enchilados y mix de micheladas con el toque moderno de México.</p>
-  <a href="#productos"><button class="btn">Ver Productos</button></a>
-  <a href="#promos"><button class="btn">Ver Promociones</button></a>
+<section id="inicio" class="hero">
+<h1>Sabores con Estilo</h1>
+<p>Chamoys, gomitas, dulces enchilados y mix de micheladas con el toque moderno de México.</p>
+
+<a href="#productos"><button class="btn">Ver Productos</button></a>
+<a href="#promos"><button class="btn">Ver Promociones</button></a>
 </section>
 
 <section id="productos">
-  <h2>🍬 Productos Destacados 🍬</h2>
-  <div class="productos">
-    <div class="producto">
-      <img src= https://i.ibb.co/PvHyyj0W/Sin-t-tulo.pngalt="">
-      <h3>Gomitas Enchiladas Deluxe</h3>
-      <p>El balance perfecto entre picante, dulce y ácido.</p>
-    </div>
-    <div class="producto">
-      <img src= https://i.ibb.co/DPv8nq3R/Sin-t-tulo.pngalt="">
-      <h3>Chamoy Mister Chile</h3>
-      <p>El chamoy con textura cremosa y un sabor único.</p>
-    </div>
-    <div class="producto">
-      <img src= https://i.ibb.co/6KFZPfs/IMG-1878.jpgalt="">
-      <h3>Mix para Micheladas Premium</h3>
-      <p>Transforma cualquier bebida en una experiencia mexicana.</p>
-    </div>
-  </div>
+
+<h2>🍬 Productos Destacados 🍬</h2>
+
+<div class="productos">
+
+<div class="producto">
+<img src="https://i.ibb.co/PvHyyj0W/Sin-t-tulo.png" alt="">
+<h3>Gomitas Enchiladas Deluxe</h3>
+<p>El balance perfecto entre picante, dulce y ácido.</p>
+</div>
+
+<div class="producto">
+<img src="https://i.ibb.co/DPv8nq3R/Sin-t-tulo.png" alt="">
+<h3>Chamoy Mister Chile</h3>
+<p>El chamoy con textura cremosa y un sabor único.</p>
+</div>
+
+<div class="producto">
+<img src="https://i.ibb.co/6KFZPfs/IMG-1878.jpg" alt="">
+<h3>Mix para Micheladas Premium</h3>
+<p>Transforma cualquier bebida en una experiencia mexicana.</p>
+</div>
+
+</div>
 </section>
 
 <section id="promos">
-  <h2>🎉 Promociones Especiales 🎉</h2>
-  <div class="promo-box">
-    <h3>Pack Fiesta</h3>
-    <p>Incluye 2 chamoys + 3 gomitas enchiladas + 1 mix michelada.</p>
-  </div>
-  <a href="https://www.instagram.com/mr.chilemx_/" target="_blank">
-    <button class="btn">Síguenos en Instagram</button>
-  </a>
+
+<h2>🎉 Promociones Especiales 🎉</h2>
+
+<div class="promo-box">
+<h3>Pack Fiesta</h3>
+<p>Incluye 2 chamoys + 3 gomitas enchiladas + 1 mix michelada.</p>
+</div>
+
+<a href="https://www.instagram.com/mr.chilemx_/" target="_blank">
+<button class="btn">Síguenos en Instagram</button>
+</a>
+
 </section>
 
 <section id="nosotros">
-  <h2>🇲🇽 Hecho con Orgullo en México</h2>
-  <p>Mister Chile nace de la pasión por los sabores enchilados que nos representan.</p>
+
+<h2>🇲🇽 Hecho con Orgullo en México</h2>
+<p>Mister Chile nace de la pasión por los sabores enchilados que nos representan.</p>
+
 </section>
 
 <footer>
-  © 2025 Mister Chile | Todos los derechos reservados | 
-  <a href="https://www.instagram.com/mr.chilemx_/" target="_blank">@mr.chilemx_</a>
+© 2025 Mister Chile | Todos los derechos reservados |
+<a href="https://www.instagram.com/mr.chilemx_/" target="_blank">@mr.chilemx_</a>
 </footer>
 
 </body>
